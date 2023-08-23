@@ -47,7 +47,7 @@ public class EmployeeCnaps {
 
     @Column(name = "children_number")
     private Integer childrenNumber;
-//    @Column(name = "end_to_end_id")
-//    private String EndToEndId;
+    @Column(name = "end_to_end_id")
+    private String endToEndId;
 
 }
