@@ -52,7 +52,7 @@ public class EmployeeMapper {
                     .professionalEmail(employee.getProfessionalEmail())
                     .personalEmail(employee.getPersonalEmail())
                     // dates
-                    .birthDate(employee.getBirthDate())
+                    .birthdate(employee.getBirthDate())
                     .departureDate(employee.getDepartureDate())
                     .entranceDate(employee.getEntranceDate())
                     // lists
@@ -89,7 +89,7 @@ public class EmployeeMapper {
                 .professionalEmail(employee.getProfessionalEmail())
                 .personalEmail(employee.getPersonalEmail())
                 // dates
-                .birthDate(employee.getBirthDate())
+                .birthDate(employee.getBirthdate())
                 .departureDate(employee.getDepartureDate())
                 .entranceDate(employee.getEntranceDate())
                 // lists

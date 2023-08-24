@@ -24,7 +24,7 @@ create table if not exists "employee"
     registration_number varchar not null,
     personal_email      varchar not null unique,
     cin                 varchar not null check ( cin ~ '^[0-9]+$'),
-    cnaps               varchar not null check ( cnaps ~ '^[A-Za-z0-9]+$' ),
+    cnaps varchar not null check (cnaps ~ '^[A-Za-z0-9]+$' OR cnaps = '(that employee doesn''t have CNAPS number yet)'),
     children_number     integer            default 0 check ( children_number > -1 ),
     birthdate          date    not null,
     entrance_date       date    not null,

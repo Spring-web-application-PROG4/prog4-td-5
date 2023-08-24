@@ -8,4 +8,5 @@ import java.util.Optional;
 public interface EmployeeCnapsRepository extends JpaRepository<EmployeeCnaps, String> {
     Optional<EmployeeCnaps> findByPersonalEmail(String personalEmail);
 
+    Optional<EmployeeCnaps> findByEndToEndId(String id);
 }

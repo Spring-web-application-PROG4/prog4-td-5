@@ -4,6 +4,8 @@ import com.example.prog4.repository.database2.EmployeeCnapsRepository;
 import com.example.prog4.repository.database2.entity.EmployeeCnaps;
 import lombok.AllArgsConstructor;
 
+import java.util.Optional;
+
 @org.springframework.stereotype.Repository
 @AllArgsConstructor
 public class CnapsRepositoryFacade  implements Repository<EmployeeCnaps>{
@@ -11,14 +13,19 @@ public class CnapsRepositoryFacade  implements Repository<EmployeeCnaps>{
     private EmployeeCnapsRepository employeeCnapsRepository;
 
     @Override
-    public EmployeeCnaps findById(String id) {
-        return employeeCnapsRepository.findById(id).get();
+    public Optional<EmployeeCnaps> findById(String id) {
+        return employeeCnapsRepository.findByEndToEndId(id);
     }
+
 
     @Override
     public EmployeeCnaps save(EmployeeCnaps toSave){
-        return employeeCnapsRepository.save(toSave);
+        return employeeCnapsRepository.saveAndFlush(toSave);
     }
 
+    @Override
+    public boolean existsById(String id){
+        return employeeCnapsRepository.existsById(id);
+    }
 
 }
