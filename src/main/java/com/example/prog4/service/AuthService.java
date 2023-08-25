@@ -1,14 +1,11 @@
 package com.example.prog4.service;
-
 import com.example.prog4.model.exception.ForbiddenException;
 import com.example.prog4.repository.SessionRepository;
 import com.example.prog4.repository.UserRepository;
 import com.example.prog4.repository.entity.Session;
 import com.example.prog4.repository.entity.User;
 import lombok.AllArgsConstructor;
-
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
